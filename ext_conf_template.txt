@@ -1,0 +1,2 @@
+# cat=import module/enable/22; type=string; label=Type used for amp:Use 0 or any other type
+type = null
