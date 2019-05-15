@@ -16,6 +16,14 @@ class ImageViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\ImageViewHelper
         parent::__construct();
     }
 
+    public function render()
+    {
+        if ($this->isAmpEnabled) {
+            $this->tag->setTagName('amp-img');
+        }
+        return parent::render();
+    }
+
     public function initialize()
     {
         if ($this->isAmpEnabled) {
