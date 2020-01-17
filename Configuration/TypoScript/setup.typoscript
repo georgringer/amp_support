@@ -12,11 +12,23 @@ page.headerData.91919 {
     wrap = <link rel="amphtml" href="|">
 }
 
-[globalVar = TSFE:type = 10]
+#Update Typo3 > 9.4
+[getTSFE().type == 10]
+#[globalVar = TSFE:type = 10]
     pageAmp < page
     pageAmp.typeNum = 10
 
-    config.htmlTag_setParams = amp
+    #config.htmlTag_setParams = amp
+    #Example Multilingual
+    config.htmlTag_stdWrap {
+        setContentToCurrent = 0
+        cObject = COA
+        cObject {
+            wrap = <html lang="en" amp>
+        }
+    }
+    
+    
     config.admPanel >
     pageAmp.20 >
     pageAmp.meta {
